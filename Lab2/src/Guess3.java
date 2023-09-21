@@ -8,32 +8,30 @@ public class Guess3 {
     }
     public static void giveHint( int input_1, int input_2, int answer, String player1, String player2){
         if( input_1 < answer && input_2 < answer){
-                System.out.println("Hint:" + " " + player1+ " "+ "you are getting warmer to the answer!\n");
-                System.out.println("Hint:" + " " + player2+ " "+ "you are getting warmer to the answer!\n");
+                System.out.println("Hint:" + " " + player1+ " "+ "you are guess was too low from the answer!\n");
+                System.out.println("Hint:" + " " + player2+ " "+ "you are guess was too low from the answer!\n");
         }
 
         else if( input_1 < answer){
-             System.out.println("Hint:" + " " + player1+ " "+ "you are getting warmer to the answer!\n");
+             System.out.println("Hint:" + " " + player1+ " "+ "you are guess was too low from the answer!\n");
         }
 
         else if ( input_2 < answer){
-                System.out.println("Hint:" +  " " + player2 + " " + "you are getting warmer to the answer!\n");
+                System.out.println("Hint:" +  " " + player2 + " " + "you are guess was too low from the answer!\n");
         }
 
         if( input_1 > answer && input_2 > answer){
-            System.out.println("Hint:" + " " + player1+ " " + " you are getting colder from the answer!\n");
-             System.out.println("Hint:" + " " + player2+ " " + " you are getting colder from the answer!\n");
+            System.out.println("Hint:" + " " + player1+ " " + " you are guess was too high from the answer!\n");
+             System.out.println("Hint:" + " " + player2+ " " + " you are guess was too high from the answer!\n");
         }
 
         else if (input_1 > answer){
-           System.out.println("Hint:" + player1 + " " + " you are getting colder from the answer!\n");
+           System.out.println("Hint:" + player1 + " " + " you are guess was to high from the answer!\n");
         }
 
         else if(input_2 > answer){
-           System.out.println("Hint:" + player2 + " " + " you are getting colder from the answer!\n");
+           System.out.println("Hint:" + player2 + " " + " you are guess was too high from the answer!\n");
         }
-      
-        
     }
    
     public static void checkValidInput(String player1, String player2, int answer){
@@ -72,7 +70,7 @@ public class Guess3 {
         Random rand = new Random();
          // Generate random integers in range 0 to 100
         int answer = rand.nextInt(100);
-        System.out.println(" The answer: " + " " + answer + " \n");
+        //System.out.println(" The answer: " + " " + answer + " \n");
         String instructions = "Instructions: In this two-player number guessing game,\n" +
                       "each player takes turns to guess a pre-determined secret number between 1 and \n" +
                       "100, receiving hints if they're wrong. The game ends when one player guesses correctly \n" +
